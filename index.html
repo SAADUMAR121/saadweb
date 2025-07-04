@@ -29,6 +29,26 @@
     .social-links { text-align: center; margin-top: 30px; }
     .social-links a { margin: 0 10px; color: #1e90ff; text-decoration: none; font-weight: 500; }
     .contact p { margin: 10px 0; }
+    .project-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background-color: #1e90ff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #0077cc;
+}
+
+.project-link i {
+  margin-right: 8px;
+}
+
 ul.service-list {
   display: flex;
   flex-wrap: wrap;
@@ -97,6 +117,23 @@ ul.service-list li {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
+.project-btn {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .project-btn:hover {
+    background-color: #0077cc;
+  }
+
+
 
   </style>
 </head>
@@ -196,80 +233,107 @@ ul.service-list li {
 </div>
 
 
-  <section class="section">
-    <h2>Our Owners</h2>
-    <div class="owners">
-      <div class="card">
-        <img src="https://iili.io/F7KK9at.png" alt="Saad Umar">
-        <h3>SAAD UMAR</h3>
-        <p>Hi, I'm someone who believes in learning by doing. I'm not perfect, but I'm always trying to get better every day. I enjoy exploring new things, especially in tech and creative fields. I don’t know everything, but I’m not afraid to ask questions, make mistakes, and grow from them. I value honesty, curiosity, and hard work more than showing off. This is just the beginning — and I’m here to keep improving.</p>
-      </div>
-      <div class="card">
-        <img src="https://iili.io/F7q98GI.md.jpg" alt="Shoaib">
-        <h3>Shoaib Shah</h3>
-        <p>Shoaib Shah is the founder of Skillcy, a fast-growing freelance agency delivering high-quality digital solutions to clients worldwide. With a sharp eye for detail and a strong sense of responsibility, Shoaib leads the team with a focus on creativity, reliability, and client satisfaction. His vision is to make Skillcy a trusted name in the freelance industry by building long-term relationships and delivering exceptional results.
-
-</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Our Team</h2>
-    <div class="team">
-      <div class="card"><img src="https://via.placeholder.com/100" alt="Team Member 1"><h3>Team Member 1</h3><p>Role / Skill</p></div>
-      <div class="card"><img src="https://via.placeholder.com/100" alt="Team Member 2"><h3>Team Member 2</h3><p>Role / Skill</p></div>
-      <div class="card"><img src="https://via.placeholder.com/100" alt="Team Member 3"><h3>Team Member 3</h3><p>Role / Skill</p></div>
-      <div class="card"><img src="https://via.placeholder.com/100" alt="Team Member 4"><h3>Team Member 4</h3><p>Role / Skill</p></div>
-    </div>
-  </section>
-
-  <section class="section" id="projects">
-  <h2>Our Projects</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+ <section class="section">
+  <h2>Our Team</h2>
+  <div class="team" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
     
-    <!-- Project 1 -->
-    <div class="card" style="max-width: 350px;">
-      <video controls width="100%" style="border-radius: 10px;">
-        <source src="videos/project1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <h3>Social Media Ad</h3>
-      <p>30-second ad made for a fashion brand using fast cuts & effects.</p>
+    <!-- Member 1 -->
+    <div class="card" style="max-width: 300px; padding: 20px; text-align: center;">
+      <img src="https://iili.io/F7KK9at.png" alt="Saad Umar" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+      <h3>Saad Umar</h3>
+      <p>Believes in learning by doing. Passionate about exploring tech and creative fields. Focused on improvement, curiosity, and honesty every day.</p>
     </div>
 
-    <!-- Project 2 -->
-    <div class="card" style="max-width: 350px;">
-      <video controls width="100%" style="border-radius: 10px;">
-        <source src="videos/project2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <h3>Event Highlights</h3>
-      <p>Highlights from a live conference, edited with transitions and music.</p>
+    <!-- Member 2 -->
+    <div class="card" style="max-width: 300px; padding: 20px; text-align: center;">
+      <img src="https://iili.io/F7q98GI.md.jpg" alt="Shoaib Shah" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+      <h3>Shoaib Shah</h3>
+      <p>Founder of Skillcy. Leads with responsibility, creativity, and client focus. Aims to make Skillcy a trusted name in freelancing.</p>
     </div>
 
-     <!-- Project 3 -->
-    <div class="card" style="max-width: 350px;">
-      <video controls width="100%" style="border-radius: 10px;">
-        <source src="videos/project2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <h3>Event Highlights</h3>
-      <p>Highlights from a live conference, edited with transitions and music.</p>
-    </div>
-
-     <!-- Project 4 -->
-    <div class="card" style="max-width: 350px;">
-      <video controls width="100%" style="border-radius: 10px;">
-        <source src="videos/project2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <h3>Event Highlights</h3>
-      <p>Highlights from a live conference, edited with transitions and music.</p>
+    <!-- Member 3 -->
+    <div class="card" style="max-width: 300px; padding: 20px; text-align: center;">
+      <img src="https://iili.io/Fc7wtgs.jpg" alt="Hareem Fatima" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+      <h3>Hareem Fatima</h3>
+      <p>Graphics, Web Design, and Web Development expert. Delivers responsive and creative digital solutions to clients.</p>
     </div>
 
   </div>
 </section>
+
+
+
+ <section class="section" id="projects">
+  <h2>Our Projects</h2>
+
+  <!-- Filter buttons -->
+  <div style="text-align:center; margin-bottom: 30px;">
+    <button class="project-btn" onclick="showCategory('graphics')">Graphics Design</button>
+    <button class="project-btn" onclick="showCategory('web')">Websites</button>
+    <button class="project-btn" onclick="showCategory('video')">Video Editing</button>
+  </div>
+
+  <!-- GRAPHICS CATEGORY -->
+  <div id="graphics" class="project-category" style="display: block;">
+    <h3 style="text-align:center; margin-bottom: 30px;">Graphics Design Projects</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <div class="card" style="max-width: 300px;">
+        <img src="https://iili.io/Fcz2fcv.md.jpg" alt="Salon Flyer" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+      </div>
+      <div class="card" style="max-width: 300px;">
+        <img src="https://iili.io/FczTtyX.md.jpg" alt="Logo Design" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+      </div>
+      <div class="card" style="max-width: 300px;">
+        <img src="https://iili.io/FczAyrl.md.jpg" alt="Instagram Design" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+      </div>
+      <div class="card" style="max-width: 300px;">
+        <img src="https://iili.io/Fcz7mBa.md.jpg" alt="Business Card" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- WEBSITES CATEGORY -->
+  <div id="web" class="project-category" style="display: none;">
+    <h3 style="text-align:center; margin-bottom: 30px;">Website Projects</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <div class="card" style="max-width: 300px;">
+        <img src="https://iili.io/FcT142e.md.png" alt="Website 1" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+      </div>
+     <div class="card" style="max-width: 400px; padding: 20px; text-align: center;">
+  <img src="https://iili.io/FcThI99.md.png" alt="Website 2" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+  <a href="https://demo-jewellery.netlify.app/" target="_blank" style="
+    display: inline-block;
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  " onmouseover="this.style.background='#0077cc'" onmouseout="this.style.background='#1e90ff'">
+    🔗 View Website
+  </a>
+</div>
+    
+    </div>
+  </div>
+
+  <!-- VIDEO CATEGORY -->
+  <div id="video" class="project-category" style="display: none;">
+    <h3 style="text-align:center; margin-bottom: 30px;">Video Editing Projects</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <div class="card" style="max-width: 300px;">
+        <img src="https://via.placeholder.com/300x200?text=Video+1" alt="Video Project 1" style="width: 100%; border-radius: 10px;">
+      </div>
+      <div class="card" style="max-width: 300px;">
+        <img src="https://via.placeholder.com/300x200?text=Video+2" alt="Video Project 2" style="width: 100%; border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 
 
@@ -314,6 +378,17 @@ ul.service-list li {
     const contactSection = document.getElementById("contact");
     contactSection.scrollIntoView({ behavior: "smooth" });
   }
+
+  function showCategory(category) {
+    const categories = document.querySelectorAll('.project-category');
+    categories.forEach(cat => {
+      cat.style.display = 'none';
+    });
+
+    const selected = document.getElementById(category);
+    if (selected) selected.style.display = 'block';
+  }
 </script>
+
 </body>
 </html>
