@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="https://iili.io/FlIEYcx.png" type="image/png">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skillcy - Freelancing Agency</title>
@@ -133,17 +135,50 @@ ul.service-list li {
     background-color: #0077cc;
   }
 
+@media (max-width: 600px) {
+  .section {
+    padding: 30px 20px;
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 14px;
+  }
+}
+
+.details-box.horizontal ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.details-box.horizontal ul li {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  list-style: none;
+}
 
 
   </style>
 </head>
 <body>
-  <header>
+  <header style="margin-top: 40px;">
     <h1>Skillcy</h1>
     <p>Your Creative Freelancing Partner</p>
   </header>
 
- <section class="section">
+  <nav style="position: fixed; top: 0; width: 100%; background: #1d2671; color: white; z-index: 999; padding: 12px 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  <a href="#about" style="margin: 0 20px; color: white; text-decoration: none;">About</a>
+  <a href="#services" style="margin: 0 20px; color: white; text-decoration: none;">Services</a>
+  <a href="#team" style="margin: 0 20px; color: white; text-decoration: none;">Team</a>
+  <a href="#projects" style="margin: 0 20px; color: white; text-decoration: none;">Projects</a>
+  <a href="#contact" style="margin: 0 20px; color: white; text-decoration: none;">Contact</a>
+</nav>
+
+ <section class="section" id="about" style="padding-top: 120px;">
   <h2>About Us</h2>
   <p>
     At <strong>Skillcy</strong>, we are more than just a freelancing agency — we’re a team of passionate creators, developers, and designers dedicated to delivering high-quality digital solutions. Whether it's crafting a unique brand identity, editing viral videos, or developing stunning websites, our mission is simple: help your business grow with creative impact.
@@ -161,12 +196,26 @@ ul.service-list li {
 </section>
 
 
-  <section class="section">
+  <section class="section" id="services">
     <h2>Our Services</h2>
     <ul class="service-list">
       <li>
+  <span class="toggle-details" onclick="toggleDetails(this, 'social-details')">Social Media Management</span>
+  <div id="social-details" class="details-box horizontal">
+    <ul>
+      <li>Branded content creation</li>
+      <li>Captions + strategic hashtags</li>
+      <li>Content calendar & scheduling</li>
+      <li>Performance tracking & reporting</li>
+      <li>Engagement with your audience</li>
+      <li>Platform optimization</li>
+    </ul>
+  </div>
+</li>
+
+      <li>
         <span class="toggle-details" onclick="toggleDetails(this, 'graphics-details')">Graphics Designing</span>
-        <div id="graphics-details" class="details-box">
+        <div id="graphics-details" class="details-box horizontal">
           <ul>
             <li>Logo Design</li>
             <li>Social Media Posts</li>
@@ -180,7 +229,7 @@ ul.service-list li {
       </li>
       <li>
         <span class="toggle-details" onclick="toggleDetails(this, 'video-details')">Video Editing</span>
-        <div id="video-details" class="details-box">
+        <div id="video-details" class="details-box horizontal">
           <ul>
             <li>Short Form Content</li>
             <li>YouTube Videos</li>
@@ -193,7 +242,7 @@ ul.service-list li {
       </li>
       <li>
         <span class="toggle-details" onclick="toggleDetails(this, 'webdesign-details')">Web Design</span>
-        <div id="webdesign-details" class="details-box">
+        <div id="webdesign-details" class="details-box horizontal">
           <ul>
             <li>Landing Page Design</li>
             <li>UI/UX Prototyping</li>
@@ -206,7 +255,7 @@ ul.service-list li {
       </li>
       <li>
         <span class="toggle-details" onclick="toggleDetails(this, 'webdev-details')">Web Development</span>
-        <div id="webdev-details" class="details-box">
+        <div id="webdev-details" class="details-box horizontal">
           <ul>
             <li>Custom HTML/CSS/JS Development</li>
             <li>WordPress Websites</li>
@@ -233,13 +282,13 @@ ul.service-list li {
 </div>
 
 
- <section class="section">
+ <section class="section" id="team">
   <h2>Our Team</h2>
   <div class="team" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
     
     <!-- Member 1 -->
     <div class="card" style="max-width: 300px; padding: 20px; text-align: center;">
-      <img src="https://iili.io/F7KK9at.png" alt="Saad Umar" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+      <img src="https://iili.io/F7KK9at.png" alt="Saad Umar" loading="lazy" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
       <h3>Saad Umar</h3>
       <p>A self-driven creative professional passionate about learning through real-world experience. Saad combines technical expertise with a creative mindset, specializing in modern web technologies and visual storytelling. He’s dedicated to exploring new trends and delivering digital solutions that leave a lasting impression.
 
@@ -248,14 +297,14 @@ ul.service-list li {
 
     <!-- Member 2 -->
     <div class="card" style="max-width: 300px; padding: 20px; text-align: center;">
-      <img src="https://iili.io/F7q98GI.md.jpg" alt="Shoaib Shah" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+      <img src="https://iili.io/F7q98GI.md.jpg" alt="Shoaib Shah" loading="lazy" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
       <h3>Shoaib Shah</h3>
       <p>The visionary behind Skillcy, Shoaib is known for his leadership, strategic thinking, and deep commitment to client satisfaction. With a sharp eye for business and design, he ensures that every project meets the highest standards of creativity, functionality, and professionalism.</p>
     </div>
 
     <!-- Member 3 -->
     <div class="card" style="max-width: 300px; padding: 20px; text-align: center;">
-      <img src="https://iili.io/Fc7wtgs.jpg" alt="Hareem Fatima" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+      <img src="https://iili.io/Fc7wtgs.jpg" alt="Hareem Fatima" loading="lazy" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
       <h3>Hareem Fatima</h3>
       <p>A multi-talented professional with expertise in Graphics, Web Design, and Full-Stack Development. Hareem bridges design and development to create stunning, responsive, and user-friendly digital experiences. Her strong design sensibility and coding skills make her a powerhouse in any creative project.</p>
     </div>
@@ -269,27 +318,30 @@ ul.service-list li {
   <h2>Our Projects</h2>
 
   <!-- Filter buttons -->
-  <div style="text-align:center; margin-bottom: 30px;">
-    <button class="project-btn" onclick="showCategory('graphics')">Graphics Design</button>
-    <button class="project-btn" onclick="showCategory('web')">Websites</button>
-    <button class="project-btn" onclick="showCategory('video')">Video Editing</button>
-  </div>
+  <!-- Filter buttons -->
+<div style="text-align:center; margin-bottom: 30px;">
+  <button class="project-btn" onclick="showCategory('graphics')">Graphics Design</button>
+  <button class="project-btn" onclick="showCategory('web')">Websites</button>
+  <button class="project-btn" onclick="showCategory('video')">Video Editing</button>
+  <button class="project-btn" onclick="showCategory('social')">Social Media</button>
+</div>
+
 
   <!-- GRAPHICS CATEGORY -->
   <div id="graphics" class="project-category" style="display: block;">
     <h3 style="text-align:center; margin-bottom: 30px;">Graphics Design Projects</h3>
     <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
       <div class="card" style="max-width: 300px;">
-        <img src="https://iili.io/Fcz2fcv.md.jpg" alt="Salon Flyer" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+        <img src="https://iili.io/Fcz2fcv.md.jpg" alt="Salon Flyer" loading="lazy" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
       </div>
       <div class="card" style="max-width: 300px;">
-        <img src="https://iili.io/FczTtyX.md.jpg" alt="Logo Design" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+        <img src="https://iili.io/FczTtyX.md.jpg" alt="Logo Design" loading="lazy" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
       </div>
       <div class="card" style="max-width: 300px;">
-        <img src="https://iili.io/FczAyrl.md.jpg" alt="Instagram Design" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+        <img src="https://iili.io/FczAyrl.md.jpg" alt="Instagram Design" loading="lazy" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
       </div>
       <div class="card" style="max-width: 300px;">
-        <img src="https://iili.io/Fcz7mBa.md.jpg" alt="Business Card" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+        <img src="https://iili.io/Fcz7mBa.md.jpg" alt="Business Card" loading="lazy" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
       </div>
     </div>
   </div>
@@ -299,10 +351,10 @@ ul.service-list li {
     <h3 style="text-align:center; margin-bottom: 30px;">Website Projects</h3>
     <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
       <div class="card" style="max-width: 300px;">
-        <img src="https://iili.io/FcT142e.md.png" alt="Website 1" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+        <img src="https://iili.io/FcT142e.md.png" alt="Website 1" loading="lazy" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
       </div>
      <div class="card" style="max-width: 400px; padding: 20px; text-align: center;">
-  <img src="https://iili.io/FcThI99.md.png" alt="Website 2" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
+  <img src="https://iili.io/FcThI99.md.png" alt="Website 2" loading="lazy" style="width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px;">
   <a href="https://demo-jewellery.netlify.app/" target="_blank" style="
     display: inline-block;
     background-color: #1e90ff;
@@ -325,13 +377,62 @@ ul.service-list li {
     <h3 style="text-align:center; margin-bottom: 30px;">Video Editing Projects</h3>
     <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
       <div class="card" style="max-width: 300px;">
-        <img src="https://via.placeholder.com/300x200?text=Video+1" alt="Video Project 1" style="width: 100%; border-radius: 10px;">
+        <img src="https://via.placeholder.com/300x200?text=Video+1" alt="Video Project 1" loading="lazy" style="width: 100%; border-radius: 10px;">
       </div>
       <div class="card" style="max-width: 300px;">
-        <img src="https://via.placeholder.com/300x200?text=Video+2" alt="Video Project 2" style="width: 100%; border-radius: 10px;">
+        <img src="https://via.placeholder.com/300x200?text=Video+2" alt="Video Project 2" loading="lazy" style="width: 100%; border-radius: 10px;">
       </div>
     </div>
   </div>
+
+ <!-- SOCIAL MEDIA MANAGEMENT PROJECT -->
+<div id="social" class="project-category" style="display: none;">
+  <h3 style="text-align:center; margin-bottom: 30px;">Social Media Management</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div class="card" style="max-width: 600px; width: 100%; text-align: left;">
+      <h3 style="margin-bottom: 15px;">📱 Social Media Management</h3>
+      <p><strong>We offer monthly social media management tailored to your brand’s goals.</strong> Whether you’re a startup or an established brand, we’ll help you grow organically, consistently, and meaningfully.</p>
+
+      <div style="margin-top: 15px;">
+        <details style="background: #f1f2f6; padding: 15px; border-radius: 10px;">
+          <summary style="cursor: pointer; font-weight: 600; color: #1e90ff; margin-bottom: 10px;">📌 What's included</summary>
+          <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>🎨 Branded content creation</li>
+            <li>✍️ Captions + strategic hashtags</li>
+            <li>🗓️ Content calendar & scheduling</li>
+            <li>📈 Performance tracking & reporting</li>
+            <li>🤝 Engagement with your audience</li>
+            <li>⚙️ Platform optimization</li>
+          </ul>
+        </details>
+
+        <details style="background: #f1f2f6; padding: 15px; border-radius: 10px; margin-top: 10px;">
+          <summary style="cursor: pointer; font-weight: 600; color: #1e90ff;">💼 Platforms we manage</summary>
+          <p style="margin-top: 10px;">Instagram | Facebook | LinkedIn | Twitter</p>
+        </details>
+
+        <details style="background: #f1f2f6; padding: 15px; border-radius: 10px; margin-top: 10px;">
+          <summary style="cursor: pointer; font-weight: 600; color: #1e90ff;">💡 Basic Monthly Plan (Starter Brand Presence)</summary>
+          <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>✔️ 3 Platforms</li>
+            <li>✔️ 4–5 posts/week</li>
+            <li>✔️ 2 Stories/week</li>
+            <li>✔️ Hashtags + Captions</li>
+            <li>✔️ Content Calendar</li>
+            <li>✔️ Weekly check-ins</li>
+            <li>✔️ Monthly report</li>
+          </ul>
+        </details>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://wa.me/923329709439" target="_blank" style="background:#1e90ff; color:white; padding:12px 20px; text-decoration:none; border-radius:6px; font-weight:600;">💬 Book a Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </section>
 
 
