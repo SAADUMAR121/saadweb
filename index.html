@@ -381,43 +381,40 @@ ul.service-list li {
   <h3 style="text-align:center; margin-bottom: 30px;">Video Editing Projects</h3>
   <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
     
-    <!-- Video 1 -->
-    <div class="card" onclick="openVideo('https://drive.google.com/file/d/1B9GygcsRf3pm63vbuRPSNSZpTxnuV4lG/view?t=15')"
-         style="max-width: 340px; cursor: pointer;">
-      <img src="https://iili.io/F10CXyv.md.jpg"
-           alt="Video Project 1" loading="lazy"
-           style="width: 100%; border-radius: 12px;">
-      <h4 style="margin-top: 12px;">Reel Edits</h4>
-    </div>
+<!-- Video 1 -->
+<div class="card" onclick="openVideo('https://drive.google.com/file/d/1B9GygcsRf3pm63vbuRPSNSZpTxnuV4lG/preview')"
+     style="max-width: 340px; cursor: pointer;">
+  <img src="https://iili.io/F10CXyv.md.jpg"
+       alt="Video Project 1" loading="lazy"
+       style="width: 100%; border-radius: 12px;">
+  <h4 style="margin-top: 12px;">Reel Edits</h4>
+</div>
 
-    <!-- Video 2 -->
-    <div class="card" onclick="openVideo('https://drive.google.com/file/d/1zNWeJMVvjSwwXJnCkEmhkjd9lStajSsU/view?t=21')"
-         style="max-width: 340px; cursor: pointer;">
-      <img src="https://iili.io/F107O4R.md.webp"
-           alt="Video Project 2" loading="lazy"
-           style="width: 100%; border-radius: 12px;">
-      <h4 style="margin-top: 12px;">Anime Reels</h4>
-    </div>
+<!-- Video 2 -->
+<div class="card" onclick="openVideo('https://drive.google.com/file/d/1zNWeJMVvjSwwXJnCkEmhkjd9lStajSsU/preview')"
+     style="max-width: 340px; cursor: pointer;">
+  <img src="https://iili.io/F107O4R.md.webp"
+       alt="Video Project 2" loading="lazy"
+       style="width: 100%; border-radius: 12px;">
+  <h4 style="margin-top: 12px;">Anime Reels</h4>
+</div>
 
-    <!-- Video 3 -->
-    <div class="card" onclick="openVideo('https://drive.google.com/file/d/1eNw3p6SkeSoUH56puKLLEBi22qVI-jLP/view')"
-         style="max-width: 340px; cursor: pointer;">
-      <img src="https://iili.io/F10jVLl.md.png"
-           alt="Video Project 3" loading="lazy"
-           style="width: 100%; border-radius: 12px;">
-      <h4 style="margin-top: 12px;">YouTube Shorts and Reels</h4>
-    </div>
+<!-- Video 3 -->
+<div class="card" onclick="openVideo('https://drive.google.com/file/d/1eNw3p6SkeSoUH56puKLLEBi22qVI-jLP/preview')"
+     style="max-width: 340px; cursor: pointer;">
+  <img src="https://iili.io/F10jVLl.md.png"
+       alt="Video Project 3" loading="lazy"
+       style="width: 100%; border-radius: 12px;">
+  <h4 style="margin-top: 12px;">YouTube Shorts and Reels</h4>
+</div>
 
-    <!-- Video 4 -->
-    <div class="card" onclick="openVideo('https://drive.google.com/file/d/1XnP8SPnMzPkyue2yiL79eYnNWHc4rG4y/view')"
-         style="max-width: 340px; cursor: pointer;">
-      <img src="https://iili.io/F10SkWg.md.jpg"
-           alt="Video Project 4" loading="lazy"
-           style="width: 100%; border-radius: 12px;">
-      <h4 style="margin-top: 12px;">Long Form Video</h4>
-    </div>
-
-  </div>
+<!-- Video 4 -->
+<div class="card" onclick="openVideo('https://drive.google.com/file/d/1XnP8SPnMzPkyue2yiL79eYnNWHc4rG4y/preview')"
+     style="max-width: 340px; cursor: pointer;">
+  <img src="https://iili.io/F10SkWg.md.jpg"
+       alt="Video Project 4" loading="lazy"
+       style="width: 100%; border-radius: 12px;">
+  <h4 style="margin-top: 12px;">Long Form Video</h4>
 </div>
 
 <!-- Modal for playing YouTube videos -->
@@ -556,6 +553,21 @@ linkedin.com/in/saad-umar-b79798281">LinkedIn</a>
     const modal = document.getElementById('videoModal');
     const iframe = document.getElementById('videoFrame');
     iframe.src = url + "?autoplay=1";
+    modal.style.display = 'flex';
+  }
+
+  function closeVideo() {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoFrame');
+    iframe.src = "";
+    modal.style.display = 'none';
+  }
+</script>
+<script>
+  function openVideo(url) {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoFrame');
+    iframe.src = url;
     modal.style.display = 'flex';
   }
 
