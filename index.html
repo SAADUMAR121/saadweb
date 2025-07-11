@@ -184,14 +184,90 @@ ul.service-list li {
   list-style: none;
 }
 
+#why {
+  background: #eef2f7;
+  padding: 60px 20px;
+  text-align: center;
+}
 
+#why h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #1e3c72;
+}
+
+.why-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.why-us .card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  max-width: 300px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.why-us .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.why-us .card h3 {
+  color: #1e90ff;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.why-us .card p {
+  color: #555;
+  font-size: 15px;
+}
+
+ header {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    header p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .btn-primary, .btn-outline {
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-primary {
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+    }
+    .btn-outline {
+      border: 2px solid white;
+      color: white;}
+      
   </style>
 </head>
 <body>
-  <header style="margin-top: 40px;">
-    <h1>Skillcy</h1>
-    <p>Your Creative Freelancing Partner</p>
-  </header>
+  <header>
+  <h1>From Ideas to Execution — Skillfully Done</h1>
+  <p>Creative digital solutions for growing brands</p>
+  <a href="#services" class="btn-outline">View Services</a>
+  <a href="#contact" class="btn-primary">Start a Project</a>
+</header>
 
   <nav style="position: fixed; top: 0; width: 100%; background: #1d2671; color: white; z-index: 999; padding: 12px 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
   <a href="#about" style="margin: 0 20px; color: white; text-decoration: none;">About</a>
@@ -218,7 +294,15 @@ ul.service-list li {
 
 </section>
 
+<section id="why" data-aos="fade-up">
 
+  <h2>Why Choose Us</h2>
+  <div class="why-us">
+    <div class="card"><h3>🕒 On-Time Delivery</h3><p>We meet deadlines, every time.</p></div>
+    <div class="card"><h3>💬 Clear Communication</h3><p>We stay connected from start to finish.</p></div>
+    <div class="card"><h3>🎯 Custom Approach</h3><p>Each project is tailored to your brand.</p></div>
+  </div>
+</section>
   <section class="section" id="services">
     <h2 data-aos="fade-up">Our Services</h2>
 
